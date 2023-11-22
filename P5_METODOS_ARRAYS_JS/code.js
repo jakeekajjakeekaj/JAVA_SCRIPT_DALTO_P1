@@ -1,5 +1,6 @@
 let cadena = "cadena de prueba";
 let cadena2 = " jaja";
+let resultdo = "0";
 
 cadenaLarga = cadena.concat(" hola" + cadena2);  //concat SIRVE PARA CONCATENAR CADENAS
 document.write(cadenaLarga);
@@ -57,3 +58,49 @@ document.write("<br>split: " + resultado);
 
 resultado = cadenaLarga2.substring(3, 8);   //substring SIRVE PARA DETERMINAR DE DONDE A DONDE SE OBTIENE EL STRING
 document.write("<br>substring: " + resultado);
+
+resultado = cadenaLarga2.toLowerCase();
+document.write("<br>toLowerCase: " + resultado);
+
+resultado = cadenaLarga2.toUpperCase();
+document.write("<br>toUpperCase: " + resultado);
+
+resultado = cadenaLarga2.toString();    //Mayormente sirve para convertir numeros a string o arrays a string
+document.write("<br>toString: " + resultado);
+
+resultado = cadenaLarga2.trim();    //quita espacios del principio y del final
+document.write("<br> trim: " + resultado + ", tiene longitud de: " + resultado.length);
+
+resultado = cadenaLarga2.trimStart();    //quita espacios del principio
+document.write("<br> trimStart: " + resultado + ", tiene longitud de: " + resultado.length);
+
+resultado = cadenaLarga2.trimEnd();    //quita espacios del final
+document.write("<br> trimEnd: " + resultado + ", tiene longitud de: " + resultado.length);
+
+// ----------------------------------------- 3A Parte, hasta ahorita han sido mas separadores y esas cosas -----------------------------------------
+
+// ESTOS SON TRANSFORMADORES, ES DECIR QUE MODIFICAN AL ORIGINAL
+document.write("<hr>--------INICIO DE 3RA PARTE TRANSFORMADORES, TODO SE MODIFICIA--------");
+let arr1 = ["Pedro", "maria", "pepe", "JUAN"];
+document.write("<br>El array es: " + arr1);
+
+resultado = arr1.pop(); //Saca el último elemento y modifica el array
+document.write("<br>pop: " + resultado + ", el array queda: " + arr1);
+
+resultado = arr1.shift();   //Saca el primer elemento
+document.write("<br>shift: " + resultado + ", el array queda: " + arr1);
+
+resultado = arr1.push("Juano"); //Agrega un elemento al final
+document.write("<br>push: 'Juano', el array queda: " + arr1);
+
+resultado = arr1.reverse(); //Invierte el orden del array
+document.write("<br>reverse: " + resultado + ", el array queda: " + arr1);
+
+resultado = arr1.unshift("Ricardo"); //Agrega uno o mas elementos al inicio del array y lo devuelve
+document.write("<br>unshift: " + arr1);
+
+resultado = arr1.sort();    //Orden los elementos
+document.write("<br>sort: " + resultado);
+
+resultado = arr1.splice(1, 2, "MARIO"); //Elimina los elementos, en este caso el primer dato indica desde dónde arranca, el segundo espacio indica cuántos elementos elimina y el 3er espacio indica lo que se agregará arrancando a partir de donde se indicó que emepezaba
+document.write("<br>splice: " + arr1);
